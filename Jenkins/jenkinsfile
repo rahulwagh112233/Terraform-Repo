@@ -1,0 +1,24 @@
+node {
+    
+    stage('git clone') {
+        
+        git branch: 'main', url: 'https://github.com/rahulwagh112233/Terraform-Repo.git'
+    }
+    stage('terafom init') {
+        dir('Day1'){
+        sh 'terraform init'
+        }
+    }
+    stage('terraform plan') {
+        dir('Day1'){
+        sh 'terraform plan'
+        }
+       
+    }
+    stage('terraform plan') {
+        dir('Day1'){
+        sh 'terraform destroy -auto-approve'
+        }
+    }
+    
+}
