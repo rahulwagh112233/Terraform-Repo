@@ -1,8 +1,8 @@
 node {
     
     stage('git clone') {
-        
-        git branch: 'main', url: 'https://github.com/rahulwagh112233/Terraform-Repo.git' 
+
+        git branch: 'main', url: 'https://github.com/rahulwagh112233/Terraform-Repo.git'
     }
     stage('terafom init') {
         dir('Jenkins'){
